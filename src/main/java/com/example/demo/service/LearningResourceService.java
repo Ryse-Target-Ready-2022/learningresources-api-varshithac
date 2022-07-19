@@ -23,19 +23,13 @@ public class LearningResourceService {
 	   
 	    public void saveLearningResources(List<LearningResource> list){
 	    	for(LearningResource lr : list) {
-	    		if(!repo.existsById(lr.getId())) {
 	    		    repo.save(lr);
-	    		}
-	    	}		
+	    	 }		
 	      }
 	    
 	   
-		public String removeLearningResource(int id){
-			if(repo.existsById(id)) {
+		public void removeLearningResource(int id){
 			    repo.deleteById(id);
-			    return "Successfully Deleted";
-			}
-			return "Invalid Id";
 		}
 
 
