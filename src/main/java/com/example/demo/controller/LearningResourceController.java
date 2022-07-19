@@ -32,8 +32,8 @@ public class LearningResourceController {
 	}
 	
     @DeleteMapping("/{id}")
-    public String removeLearningResource(@PathVariable int id){
-		 return service.removeLearningResource(id);
+    public void removeLearningResource(@PathVariable int id){
+		  service.removeLearningResource(id);
 	}
 
 }
